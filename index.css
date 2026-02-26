@@ -4,10 +4,11 @@
   --pale: #f4f4f4;
   --pale-dark: #efefef;
   --paper: #f9f9f9;
-  --primary: #ee7e06;
+  --primary: #682308;
   --dark: #010203;
-  --primary-light: #ffb76a;
-  --primary-very-light: #ffc07c;
+  --primary-light: #7a2808;
+  --primary-very-light: #93320c;
+  --secondary: #ff9600;
 }
 
 * {
@@ -30,13 +31,22 @@ body {
   right: 10px !important;
 }
 
+.bg-sheets {
+  background: linear-gradient(-120deg, #f4f4f4, #f4f4f4),
+    url("https://images.pexels.com/photos/212269/pexels-photo-212269.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom;
+}
+
 html {
-  font-size: 13.5px;
+  font-size: 12.5px;
   line-height: 1.8;
 }
 
 .logo {
-  width: 30px;
+  height: 60px;
+  transform: scale(2, 2);
 }
 
 .gradient {
@@ -92,6 +102,22 @@ html {
   visibility: visible;
   backdrop-filter: blur(4px);
   display: flex !important;
+}
+
+.shadow-custom {
+  transition: 1s;
+  background-color: var(--pale);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+.shadow-custom:hover {
+  /* transition: 1s;  */
+}
+
+.shadow-n {
+  box-shadow: 0px 30px 20px rgba(195, 195, 195, 0.279);
 }
 
 .modal-content {
