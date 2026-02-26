@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - TRS</title>
+
+    <!-- icons  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- tailwind  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- styles  -->
+    <link rel="stylesheet" href="./index.css" />
+    <!-- AOS animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+
+    <!-- js  -->
+    <script src="./index.js"></script>
+  </head>
+  <body class="bg-[var(--pale)]">
+    <!-- navbar  -->
+    <div
+      class="fixed z-[1000] top-0 left-0 w-full bg-[var(--paper)] py-4 md:py-2"
+    >
+      <nav class="flex items-center h-full justify-between max-w-[90vw] m-auto">
+        <!-- logo  -->
+        <a href="/index.html">
+          <img class="logo" src="./assets/icons/logo.svg" alt="" />
+        </a>
+
+        <!-- links  -->
+        <div class="hidden md:flex gap-6 items-center justify-between">
+          <a href="/index.html">Home</a>
+          <a href="/about.html" class="text-[var(--primary)] font-medium"
+            >About Us</a
+          >
+          <a href="/contact.html">Contact Us</a>
+          <a
+            target="_blank"
+            href="https://system.taskreportingsystem.com"
+            class="rounded-full px-4 py-2 text-[var(--primary)] border border-[var(--primary)]"
+            >Getting Started</a
+          >
+        </div>
+
+        <!-- mobile menu button -->
+        <button
+          class="md:hidden h-10 w-10 flex items-center justify-center rounded-lg border border-black/10"
+          aria-label="Toggle menu"
+          id="mobile-menu-toggle"
+        >
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </nav>
+      <!-- mobile dropdown -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-[var(--paper)] border-t border-black/10"
+      >
+        <div class="max-w-[90vw] m-auto py-3 flex flex-col gap-2">
+          <a href="/index.html" class="py-2">Home</a>
+          <a href="/about.html" class="py-2 text-[var(--primary)] font-medium"
+            >About Us</a
+          >
+          <a href="/contact.html" class="py-2">Contact Us</a>
+          <a
+            target="_blank"
+            href="https://system.taskreportingsystem.com"
+            class="rounded-full px-4 py-2 text-center text-[var(--primary)] border border-[var(--primary)]"
+            >Getting Started</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- hero -->
+    <header
+      class="relative md:h-[100vh] h-auto min-h-[70vh] max-w-[90vw] m-auto pt-[12vh] md:pt-[12vh]"
+    >
+      <!-- vertical label -->
+      <div
+        class="hidden md:block rotate-90 origin-left text-[8rem] leading-none font-extrabold tracking-wider text-black/2 select-none"
+        aria-hidden="true"
+      >
+        ABOUT
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 items-center min-h-[55vh]">
+        <!-- left: title -->
+        <div class="pb-6" data-aos="fade-right">
+          <h2
+            class="text-3xl md:text-5xl text-center md:text-left font-semibold"
+          >
+            About TRS
+          </h2>
+          <p
+            class="mt-2 text-sm md:text-base md:text-left text-center opacity-50"
+          >
+            Built by TekJuice, the Task Reporting System (TRS) redefines how modern teams manage, measure and report work. Combining intelligent automation, instant analytics and mobile-first design, TRS gives leaders a single source of truth for performance driving efficiency, transparency and trust across every project.
+          </p>
+          
+       <p class="mt-8">
+         <a href="https://system.taskreportingsystem.com"
+          
+          class="gradient mt-4 px-6 py-3 rounded-full w-full md:w-auto">
+            Getting Started Today
+        </a>
+       </p>
+        </div>
+
+        <!-- right: big TRS with image fill -->
+        <div class="relative" data-aos="fade-left">
+          <div
+            class="hero-trs relative text-transparent font-extrabold leading-[0.8] text-[22vw] select-none"
+            style="
+              background-image: url('https://res.cloudinary.com/dauv815j5/image/upload/v1759823146/pexels-photo-5240149_m1kzam.webp');
+              background-size: cover;
+              background-position: center;
+              -webkit-background-clip: text;
+              background-attachment: fixed;
+              background-clip: text;
+            "
+          >
+            TRS
+          </div>
+        </div>
+      </div>
+
+      <!-- soft rounded container corners like screenshot -->
+      <div
+        class="pointer-events-none absolute inset-0 rounded-[2rem] md:rounded-[2.5rem]"
+      ></div>
+    </header>
+
+    <div
+      class="py-[5vw] bg-[var(--paper)] flex flex-col items-center justify-center mt-6"
+    >
+      <div class="max-w-[90vw] md:max-w-[50vw] text-center opacity-80 m-auto">
+        <h1 class="text-4xl font-bold mb-6">
+          What <span class="text-[var(--primary)]">Do</span> we do?
+        </h1>
+        <p class="font-medium mb-4 underline">TRS : The Smarter Way to Manage, Track and Report Work
+</p>
+        <p class="opacity-50">
+          TRS is an intelligent task reporting and management platform built to simplify how teams plan, execute and deliver. By centralising tasks, deadlines and performance data into one unified workspace, TRS eliminates silos and confusion.
+
+        </p>
+        <p class="opacity-50 my-4">
+         Get real-time visibility into progress with automated reports, data-driven analytics and customisable dashboards that highlight bottlenecks before they become problems. TRS empowers leaders to prioritise effectively, measure results and keep every project on track.
+
+        </p>
+        <p class="opacity-50 my-4">
+       Designed for speed and mobility, our mobile-ready, cloud-based system adapts seamlessly to your workflow  reducing administrative overhead, improving accountability and accelerating delivery across your organisation.
+
+        </p>
+
+        <div class="bg-[var(--pale)] border-l-2 border-[var(--primary)] flex flex-col gap-3 p-10 ">
+          <p class="flex items-center gap-3"> 
+            <i class="fa fa-check-square text-[var(--primary)]" aria-hidden="true"></i>
+            <span>Streamline operations</span>
+</p>
+          <p class="flex items-center gap-3"> 
+            <i class="fa fa-check-square text-[var(--primary)]" aria-hidden="true"></i>
+            <span>  Track performance in real time</span>
+</p>
+          <p class="flex items-center gap-3"> 
+            <i class="fa fa-check-square text-[var(--primary)]" aria-hidden="true"></i>
+            <span> Make smarter, faster decisions</span>
+ 
+</p>
+        </div>
+
+        <p class="opacity-50 my-4">Experience clarity, control and confidence with TRS. Your all-in-one task reporting solution.</p>
+        
+        <a href="https://system.taskreportingsystem.com">
+          <button class="px-6 py-3 bg-[var(--pale)] rounded-full mt-5">
+          Getting Started with our platform
+        </button>
+        </a>
+      </div>
+    </div>
+
+    <section
+      class="relative h-[50vh] relative md:bg-fixed bg-[url(https://res.cloudinary.com/dauv815j5/image/upload/v1759823146/pexels-photo-5240149_m1kzam.webp)] bg-center bg-cover m-auto pt-[12vh] md:pt-[12vh]"
+    >
+      <div
+        class="absolute left-[5vw] top-[12vh] hidden md:block -rotate-90 origin-left text-[8rem] leading-none font-extrabold tracking-wider text-black/2 select-none"
+        aria-hidden="true"
+      >
+        ABOUT
+      </div>
+      <!-- vertical label -->
+
+      <div
+        class="backdrop-blur-lg text-[var(--paper)] bg-black/40 h-full w-full absolute top-0 left-0 flex flex-col items-center justify-center p-[5vw]"
+      >
+        <p class="text-5xl font-light">Ready to Level Up Your Team’s Productivity?
+</p>
+        <p class="text-center md:max-w-[40vw] mt-5">
+         Stop chasing updates and start seeing progress with an intuitive task reporting app that turns data into direction. Enjoy seamless reporting, instant insights and custom dashboards that adapt to how your team works.
+Start your free trial today ,clarity, confidence, and control are just one click away.
+         
+        </p>
+        <a
+        href="https://system.taskreportingsystem.com"
+          class="backdrop-blur-sm text-center rounded-full border-white/30 border bg-transparent mt-4 rounded px-8 py-3"
+        >
+          Getting Started Today
+      </a>
+      </div>
+    </section>
+
+    <!-- footer  (same as index) -->
+      <footer
+      class="h-auto bg-[var(--paper)] md:h-[40vh] py-[5vw]"
+      data-aos="fade-in"
+    >
+      <div class="m-auto max-w-[90vw]">
+        <div
+          class="grid grid-cols-2 md:flex items-stretch gap-4 md:gap-2 justify-stretch"
+        >
+          <div class="flex-1 col-span-2 md:col-span-1">
+            <img src="./assets/icons/logo.svg" class="mb-4 h-[60px] rounded-lg" alt="" />
+          </div>
+          <div class="flex-1">
+            <div class="text-xl md:text-2xl font-bold">Company</div>
+            <p class="mt-3 opacity-50">
+             United Kingdom 2nd Floor,Mansion House. <br> 41 Guild Hall Lane, Leicester LE1 5FQ
+            </p>
+          </div>
+          <div class="flex-1">
+            <div class="text-xl md:text-2xl font-bold">Policies</div>
+            <p class="mt-3 opacity-50">
+              Accessibility <br />
+              <u> Complaints & Procedure Privacy</u> <br />
+              Notes
+            </p>
+          </div>
+          <div class="flex-1">
+            <div class="text-xl md:text-2xl font-bold">Contact Us</div>
+            <p class="mt-3 opacity-50">
+              Tel: Number +44 (0) 116 402 8136 <br> Email: info@tekjuice.co.uk
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- AOS script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.AOS && typeof AOS.init === "function") {
+          AOS.init({
+            disable: function () {
+              return (
+                (window.innerWidth || document.documentElement.clientWidth) <
+                768
+              );
+            },
+            once: true,
+            duration: 700,
+            easing: "ease-out-cubic",
+            offset: 40,
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

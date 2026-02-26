@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - TRS</title>
+
+    <!-- icons  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- tailwind  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- styles  -->
+    <link rel="stylesheet" href="./index.css" />
+    <!-- AOS animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+
+    <!-- js  -->
+    <script src="./index.js"></script>
+  </head>
+  <body class="bg-[var(--paper)]">
+    <!-- navbar  -->
+    <div class="fixed z-[1000] top-0 left-0 w-full bg-[var(--paper)] py-4 md:py-2">
+      <nav class="flex items-center h-full justify-between max-w-[90vw] m-auto">
+        <!-- logo  -->
+        <a href="/index.html">
+          <img class="logo" src="./assets/icons/logo.svg" alt="" />
+        </a>
+
+        <!-- links  -->
+        <div class="hidden md:flex gap-6 items-center justify-between">
+          <a href="/index.html">Home</a>
+          <a href="/about.html">About Us</a>
+          <a href="/contact.html" class="text-[var(--primary)] font-medium"
+            >Contact Us</a
+          >
+          <a
+            target="_blank"
+            href="https://system.taskreportingsystem.com"
+            class="rounded-full px-4 py-2 text-[var(--primary)] border border-[var(--primary)]"
+            >Getting Started</a
+          >
+        </div>
+
+        <!-- mobile menu button -->
+        <button
+          class="md:hidden h-10 w-10 flex items-center justify-center rounded-lg border border-black/10"
+          aria-label="Toggle menu"
+          id="mobile-menu-toggle"
+        >
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </nav>
+      <!-- mobile dropdown -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-[var(--paper)] border-t border-black/10"
+      >
+        <div class="max-w-[90vw] m-auto py-3 flex flex-col gap-2">
+          <a href="/index.html" class="py-2">Home</a>
+          <a href="/about.html" class="py-2">About Us</a>
+          <a href="/contact.html" class="py-2 text-[var(--primary)] font-medium"
+            >Contact Us</a
+          >
+          <a
+            target="_blank"
+            href="https://system.taskreportingsystem.com"
+            class="rounded-full px-4 py-2 text-center text-[var(--primary)] border border-[var(--primary)]"
+            >Getting Started</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- hero -->
+    <div class="bg-[var(--pale)]  bg-top bg-cover ">
+      <header
+        class="flex relative max-w-[90vw] m-auto min-h-[30vh] items-center justify-between pt-[12vh]"
+      >
+        <div class="w-full" data-aos="fade-left">
+          <div class="flex items-center gap-2">
+            
+            <h1 class="text-2xl md:text-3xl font-bold">
+            Get in <span class="text-[var(--primary)]">touch</span>
+          </h1></div>
+          <p class="my-4 opacity-80">
+            We would love to hear from you. Send a message and our team will respond
+            shortly.
+          </p>
+        </div>
+      </header>
+    </div>
+
+    <!-- contact content -->
+    <section class="py-[8vw]">
+      <div class="max-w-[90vw] m-auto grid md:grid-cols-3 gap-6">
+        <!-- form -->
+        <form
+          class="md:col-span-2  rounded-lg"
+          data-aos="fade-right"
+          netlify
+          name="contact"
+          method="POST"
+          data-netlify="true"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block  mb-3">Full name</label>
+              <input
+                class="w-full border-b border-black/10  outline-none "
+                type="text"
+                placeholder="john mccathy"
+                name="name"
+                
+                required
+              />
+            </div>
+            <div>
+              <label class="block mb-3">Email</label>
+              <input
+                class="w-full  border-b border-black/10  outline-none "
+                type="email"
+                name="email"
+                required
+                placeholder="john@gmail.com"
+              />
+            </div>
+          </div>
+          <div class="my-10">
+            <label class="block  mb-3">Subject</label>
+            <select
+              class="w-full  border-b border-black/10  outline-none bg-transparent py-2"
+              name="subject"
+              required
+            >
+              <option value="" disabled selected>Select a subject...</option>
+              <option value="Request Demo">Request Demo</option>
+              <option value="Get a Glimpse">Get a Glimpse</option>
+              <option value="General Inquiry">General Inquiry</option>
+              <option value="Support Request">Support Request</option>
+              <option value="Partnership Inquiry">Partnership Inquiry</option>
+              <option value="Pricing Information">Pricing Information</option>
+              <option value="Technical Support">Technical Support</option>
+              <option value="Feature Request">Feature Request</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="mt-4">
+            <label class="block  mb-2">Message</label>
+            <textarea
+            rows="4"
+              class="w-full rounded-md  p-4 outline-none bg-[var(--pale)]"
+              name="message"
+            placeholder="Type anything..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="rounded self-end gradient px-6 py-3 mt-6">
+            Send message
+          </button>
+        </form>
+
+        <!-- contact info -->
+        <div class=" bg-[url(https://res.cloudinary.com/dauv815j5/image/upload/v1759823587/pexels-photo-6915114_1_faw6kw.webp)]  bg-cover rounded-lg bg-center overflow-hidden space-y-4" data-aos="fade-left">
+
+          </div>
+
+    </section>
+
+    <!-- footer  (same as index) -->
+       <footer
+      class="h-auto bg-[var(--paper)] md:h-[40vh] py-[5vw]"
+      data-aos="fade-in"
+    >
+      <div class="m-auto max-w-[90vw]">
+        <div
+          class="grid grid-cols-2 md:flex items-stretch gap-4 md:gap-2 justify-stretch"
+        >
+          <div class="flex-1 col-span-2 md:col-span-1">
+            <img src="./assets/icons/logo.svg" class="mb-4 h-[60px] rounded-lg" alt="" />
+          </div>
+          <div class="flex-1">
+            <div class="text-xl md:text-2xl font-bold">Company</div>
+            <p class="mt-3 opacity-50">
+             United Kingdom 2nd Floor,Mansion House. <br> 41 Guild Hall Lane, Leicester LE1 5FQ
+            </p>
+          </div>
+          <div class="flex-1">
+            <div class="text-xl md:text-2xl font-bold">Policies</div>
+            <p class="mt-3 opacity-50">
+              Accessibility <br />
+              <u> Complaints & Procedure Privacy</u> <br />
+              Notes
+            </p>
+          </div>
+          <div class="flex-1">
+            <div class="text-xl md:text-2xl font-bold">Contact Us</div>
+            <p class="mt-3 opacity-50">
+              Tel: Number +44 (0) 116 402 8136 <br> Email: info@tekjuice.co.uk
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- AOS script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.AOS && typeof AOS.init === "function") {
+          AOS.init({
+            disable: function () {
+              return (
+                (window.innerWidth || document.documentElement.clientWidth) <
+                768
+              );
+            },
+            once: true,
+            duration: 700,
+            easing: "ease-out-cubic",
+            offset: 40,
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

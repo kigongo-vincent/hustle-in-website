@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/icons/logo-1x.png" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/icons/logo-1x.png" />
+
+    <meta property="og:image" content="./assets/icons/logo.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:alt" content="Tekjuice logo" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="./assets/icons/logo.svg" />
+    <meta name="twitter:image:alt" content="Tekjuice logo" />
+    <title>TRS</title>
+
+    <!-- icons  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- tailwind  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- styles  -->
+    <link rel="stylesheet" href="./index.css" />
+    <!-- AOS animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+
+    <!-- js  -->
+    <script src="./index.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GDV1M6GYY2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-GDV1M6GYY2");
+    </script>
+  </head>
+  <body class="bg-[var(--pale)]">
+    <!-- navbar  -->
+    <div
+      class="fixed z-[1000] top-0 left-0 w-full bg-[var(--paper)] py-4 md:py-2"
+    >
+      <nav class="flex items-center h-full justify-between max-w-[90vw] m-auto">
+        <!-- logo  -->
+        <!-- <img class="logo" src="./assets/icons/logo.svg" alt="" /> -->
+        <img
+          class="logo"
+          src="https://res.cloudinary.com/dauv815j5/image/upload/v1771319637/Hustle_In_No_BG_Brown_b9cg7e.png"
+          alt=""
+        />
+
+        <!-- links  -->
+        <div class="hidden md:flex gap-6 items-center justify-between">
+          <a href="/index.html">Home</a>
+          <a href="/about.html">About Us</a>
+          <a href="/contact.html">Contact Us</a>
+          <button
+            id="demo-modal-trigger"
+            class="rounded-full px-4 py-2 text-[var(--primary)] border border-[var(--primary)]"
+          >
+            Request a demo
+          </button>
+        </div>
+
+        <!-- mobile menu button -->
+        <button
+          class="md:hidden h-10 w-10 flex items-center justify-center rounded-lg border-2 border-[var(--primary)] bg-white shadow-sm hover:bg-gray-50 transition-all duration-200"
+          aria-label="Toggle menu"
+          id="mobile-menu-toggle"
+        >
+          <i class="fa-solid fa-bars text-xl text-[var(--primary)]"></i>
+        </button>
+      </nav>
+
+      <!-- mobile dropdown -->
+      <div
+        id="mobile-menu"
+        class="md:hidden bg-[var(--paper)] border-t border-black/10 hidden"
+      >
+        <div class="max-w-[90vw] m-auto py-4 flex flex-col gap-3">
+          <a
+            href="/index.html"
+            class="py-2 text-[var(--primary)] transition-colors duration-200 hover:text-[var(--primary)]/80"
+            >Home</a
+          >
+          <a
+            href="/about.html"
+            class="py-2 transition-colors duration-200 hover:text-[var(--primary)]"
+            >About Us</a
+          >
+          <a
+            href="/contact.html"
+            class="py-2 transition-colors duration-200 hover:text-[var(--primary)]"
+            >Contact Us</a
+          >
+          <button
+            id="demo-modal-trigger-mobile"
+            class="rounded-full px-4 py-2 text-center text-[var(--primary)] border border-[var(--primary)] transition-all duration-200 hover:bg-[var(--primary)] hover:text-white transform hover:scale-[1.02] active:scale-[0.98]"
+          >
+            Request a demo
+          </button>
+          <a
+            target="_blank"
+            href="https://system.taskreportingsystem.com/"
+            class="rounded-full px-4 py-2 text-center text-[var(--primary)] border border-[var(--primary)] transition-all duration-200 hover:bg-[var(--primary)] hover:text-white transform hover:scale-[1.02] active:scale-[0.98]"
+            >Getting Started</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Demo Request Modal -->
+    <div
+      id="demo-modal"
+      class="modal-overlay fixed inset-0 bg-black/80 z-[2000] flex items-center justify-center p-6"
+      style="display: none"
+    >
+      <div
+        class="modal-content bg-[var(--paper)] rounded-lg max-w-3xl w-[90vw] md:w-full p-6 md:p-[3rem] relative shadow-2xl"
+      >
+        <button
+          id="close-modal"
+          class="absolute top-4 right-4 text-gray-500 p-2 hover:text-gray-700 transition-colors duration-200"
+        >
+          <i class="fa-solid fa-times text-xl"></i>
+        </button>
+
+        <!-- Video Check Step -->
+        <div id="video-check-step" class="text-center">
+          <!-- Simple Icon -->
+          <div class="glimpse-icon mb-6 opacity-0">
+            <div
+              class="w-16 h-16 mx-auto bg-[var(--primary)] rounded-full flex items-center justify-center shadow-lg"
+            >
+              <i class="fa fa-eye text-2xl text-white"></i>
+            </div>
+          </div>
+
+          <!-- Title -->
+          <h3 class="glimpse-title text-2xl font-bold mb-6 opacity-0">
+            Get a Glimpse
+          </h3>
+
+          <!-- Description -->
+          <p class="glimpse-description text-lg mb-8 text-gray-600 opacity-0">
+            Have you watched our tutorial video yet?
+          </p>
+
+          <!-- Buttons -->
+          <div
+            class="glimpse-buttons flex flex-col md:flex-row gap-4 justify-center opacity-0"
+          >
+            <button
+              id="watched-yes"
+              class="bg-[var(--primary)] text-white py-3 px-8 rounded-lg hover:bg-[var(--primary)]/90 transition-all duration-200 font-medium flex-1 text-center"
+            >
+              Yes, take me to the demo
+            </button>
+            <button
+              id="watched-no"
+              class="border border-[var(--primary)] text-[var(--primary)] py-3 px-8 rounded-lg hover:bg-[var(--primary)] hover:text-white transition-all duration-200 font-medium flex-1 text-center"
+            >
+              No, show me the video
+            </button>
+            <button
+              id="contact-button"
+              class="border border-[var(--primary)] text-[var(--primary)] py-3 px-8 rounded-lg hover:bg-[var(--primary)] hover:text-white transition-all duration-200 font-medium flex-1 text-center"
+              style="display: none"
+            >
+              Contact us for more information
+            </button>
+          </div>
+        </div>
+
+        <!-- Video Selection Step (hidden initially) -->
+        <div id="video-select-step" class="text-center hidden">
+          <button
+            id="video-select-back"
+            class="absolute top-4 left-4 text-gray-500 p-2 hover:text-gray-700 transition-colors duration-200"
+          >
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+
+          <h3 class="text-2xl font-bold mb-4">Choose a video</h3>
+          <p class="text-gray-600 mb-6">
+            Select a short clip to learn more about TRS
+          </p>
+
+          <div
+            id="video-list"
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[50vh] overflow-auto px-6"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      /* Modal Animation Styles */
+      .modal-overlay {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .modal-overlay.show {
+        opacity: 1;
+      }
+
+      /* Backdrop blur for modal overlays */
+      .modal-overlay {
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
+      }
+
+      /* Slight blur on thumbnail overlay to soften the image behind it */
+      .thumb-overlay {
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+      }
+
+      .modal-content {
+        transform: scale(0.9) translateY(20px);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .modal-overlay.show .modal-content {
+        transform: scale(1) translateY(0);
+      }
+
+      .glimpse-icon,
+      .glimpse-title,
+      .glimpse-description,
+      .glimpse-buttons {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+      }
+
+      .modal-overlay.show .glimpse-icon {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.1s;
+      }
+
+      .modal-overlay.show .glimpse-title {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.2s;
+      }
+
+      .modal-overlay.show .glimpse-description {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.3s;
+      }
+
+      .modal-overlay.show .glimpse-buttons {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.4s;
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("DOM loaded, initializing demo modal..."); // Debug log
+
+        const modalTrigger = document.getElementById("demo-modal-trigger");
+        const modalTriggerMobile = document.getElementById(
+          "demo-modal-trigger-mobile"
+        );
+        const glimpseModalTrigger = document.getElementById(
+          "glimpse-modal-trigger"
+        );
+        const modal = document.getElementById("demo-modal");
+        const closeModal = document.getElementById("close-modal");
+        const videoCheckStep = document.getElementById("video-check-step");
+        const watchedYes = document.getElementById("watched-yes");
+        const watchedNo = document.getElementById("watched-no");
+        const contactButton = document.getElementById("contact-button");
+
+        // Debug: Check if elements exist
+        console.log("Modal elements found:", {
+          modalTrigger: !!modalTrigger,
+          modalTriggerMobile: !!modalTriggerMobile,
+          glimpseModalTrigger: !!glimpseModalTrigger,
+          modal: !!modal,
+          closeModal: !!closeModal,
+          videoCheckStep: !!videoCheckStep,
+          watchedYes: !!watchedYes,
+          watchedNo: !!watchedNo,
+          contactButton: !!contactButton,
+        });
+
+        function openModal(isDemoRequest = false) {
+          console.log(
+            "Opening modal...",
+            isDemoRequest ? "(Demo Request)" : "(Glimpse)"
+          ); // Debug log
+
+          // Get modal content elements
+          const modalTitle = document.querySelector(".glimpse-title");
+          const modalDescription = document.querySelector(
+            ".glimpse-description"
+          );
+          const modalIcon = document.querySelector(".glimpse-icon i");
+          const yesButton = document.getElementById("watched-yes");
+          const noButton = document.getElementById("watched-no");
+
+          if (isDemoRequest) {
+            // Demo request mode - customize content
+            modalTitle.textContent = "Request a Demo";
+            modalDescription.textContent =
+              "Choose how you'd like to experience our platform";
+            modalIcon.className = "fa fa-rocket text-2xl text-white";
+            yesButton.textContent = "Try the live demo";
+            noButton.textContent = "Watch tutorial video";
+            if (contactButton) contactButton.style.display = "block";
+          } else {
+            // Glimpse mode - original content
+            modalTitle.textContent = "Get a Glimpse";
+            modalDescription.textContent =
+              "Have you watched our tutorial video yet?";
+            modalIcon.className = "fa fa-eye text-2xl text-white";
+            yesButton.textContent = "Yes, take me to the demo";
+            noButton.textContent = "No, show me the video";
+            if (contactButton) contactButton.style.display = "none";
+          }
+
+          // Show video check step
+          if (videoCheckStep) videoCheckStep.classList.remove("hidden");
+
+          // Show modal with smooth animation
+          if (modal) {
+            modal.style.display = "flex";
+            // Use requestAnimationFrame for smoother animation
+            requestAnimationFrame(() => {
+              modal.classList.add("show");
+            });
+          }
+          document.body.style.overflow = "hidden";
+        }
+
+        // function closeModalFunc() {
+        //   console.log("Closing modal..."); // Debug log
+
+        //   if (modal) {
+        //     // Start close animation
+        //     modal.classList.remove("show");
+        //     // Wait for animation to complete before hiding
+        //     setTimeout(() => {
+        //       modal.style.display = "none";
+        //     }, 300); // Match CSS transition duration
+        //   }
+        //   document.body.style.overflow = "";
+        // }
+        function closeModalFunc() {
+          console.log("Closing modal..."); // Debug log
+
+          if (modal) {
+            // Start close animation
+            modal.classList.remove("show");
+            // Wait for animation to complete before hiding
+            setTimeout(() => {
+              modal.style.display = "none";
+              // Reset modal to initial state
+              resetModal();
+            }, 300); // Match CSS transition duration
+          }
+          document.body.style.overflow = "";
+        }
+
+        function resetModal() {
+          // Show video check step and hide video select step
+          if (videoCheckStep) videoCheckStep.classList.remove("hidden");
+          const selectStep = document.getElementById("video-select-step");
+          if (selectStep) selectStep.classList.add("hidden");
+        }
+
+        function redirectToDemo() {
+          // Redirect to demo URL
+          window.open("https://demo.taskreportingsystem.com/", "_blank");
+          closeModalFunc();
+        }
+
+        // Video list mapping (from /great)
+        const videos = [
+          {
+            id: "9vlHtDUVhA8",
+            title: "TRS for Consultancy Teams— Smarter Time, Sharper Insights",
+          },
+          {
+            id: "MzcG8cihKoI",
+            title:
+              "TRS for Board Members — Insight, Clarity and Confident Decisions",
+          },
+          {
+            id: "Ww_nFJhyaR4",
+            title:
+              "TRS Admin Dashboard — Clarity, Control and Smarter Decisions",
+          },
+          {
+            id: "rhBV3BM6e4s",
+            title: "TRS by Tek Juice — The Smarter Way to Track Time and Work",
+          },
+        ];
+
+        function buildEmbedUrl(videoId) {
+          return `https://www.youtube.com/embed/${videoId}`;
+        }
+
+        function showVideoSelection() {
+          // hide the check step and show selection
+          if (videoCheckStep) videoCheckStep.classList.add("hidden");
+          const selectStep = document.getElementById("video-select-step");
+          if (selectStep) selectStep.classList.remove("hidden");
+          renderVideoList();
+        }
+
+        function renderVideoList() {
+          const container = document.getElementById("video-list");
+          if (!container) return;
+          container.innerHTML = "";
+
+          videos.forEach((v) => {
+            // Card container
+            const card = document.createElement("div");
+            card.className =
+              "relative overflow-hidden rounded-lg shadow-sm cursor-pointer transform transition-transform hover:scale-[1.01]";
+            card.setAttribute("role", "button");
+            card.setAttribute("tabindex", "0");
+
+            // Thumbnail image (YouTube high quality default)
+            const img = document.createElement("img");
+            img.src = `https://img.youtube.com/vi/${v.id}/hqdefault.jpg`;
+            img.alt = v.title;
+            img.className = "w-full h-40 md:h-52 object-cover block";
+
+            // Gradient overlay at the top with title text
+            const overlay = document.createElement("div");
+            overlay.className =
+              "absolute inset-0 p-3 bg-black/50 text-white flex items-center justify-center thumb-overlay";
+            overlay.style.pointerEvents = "none"; // let clicks pass to card
+
+            const title = document.createElement("div");
+            title.className =
+              "font-normal text-sm md:text-base leading-tight text-center";
+            title.textContent = v.title;
+
+            overlay.appendChild(title);
+
+            // Append elements
+            card.appendChild(img);
+            card.appendChild(overlay);
+
+            // Click/keyboard handlers to open the video
+            card.addEventListener("click", function () {
+              openVideoModalWithId(v.id);
+            });
+            card.addEventListener("keydown", function (e) {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openVideoModalWithId(v.id);
+              }
+            });
+
+            container.appendChild(card);
+          });
+        }
+
+        function openVideoModalWithId(videoId) {
+          // close demo modal and open the video modal with chosen video
+          closeModalFunc();
+          const videoModal = document.getElementById("video-modal");
+          const tutorialVideo = document.getElementById("tutorial-video");
+          const videoSkeleton = document.getElementById("video-skeleton");
+          const url = buildEmbedUrl(videoId);
+
+          if (videoModal && tutorialVideo && videoSkeleton) {
+            videoSkeleton.style.display = "flex";
+            tutorialVideo.style.opacity = "0";
+            tutorialVideo.src = url;
+            // ensure modal is visible
+            videoModal.style.display = "flex";
+            requestAnimationFrame(() => videoModal.classList.add("show"));
+            document.body.style.overflow = "hidden";
+          }
+        }
+
+        if (modalTrigger) {
+          modalTrigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            console.log("Desktop demo button clicked"); // Debug log
+            openModal(true); // true = demo request mode
+          });
+        }
+
+        if (modalTriggerMobile) {
+          modalTriggerMobile.addEventListener("click", function (e) {
+            e.preventDefault();
+            console.log("Mobile demo button clicked"); // Debug log
+            openModal(true); // true = demo request mode
+          });
+        }
+
+        if (glimpseModalTrigger) {
+          glimpseModalTrigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            console.log("Glimpse button clicked"); // Debug log
+            openModal(false); // false = glimpse mode
+          });
+        }
+
+        if (closeModal) {
+          closeModal.addEventListener("click", closeModalFunc);
+        }
+
+        if (watchedYes) {
+          watchedYes.addEventListener("click", redirectToDemo);
+        }
+
+        if (watchedNo) {
+          watchedNo.addEventListener("click", function (e) {
+            e.preventDefault();
+            showVideoSelection();
+          });
+        }
+
+        // Back button from selection -> show check step
+        const videoSelectBack = document.getElementById("video-select-back");
+        if (videoSelectBack) {
+          videoSelectBack.addEventListener("click", function () {
+            const selectStep = document.getElementById("video-select-step");
+            if (selectStep) selectStep.classList.add("hidden");
+            if (videoCheckStep) videoCheckStep.classList.remove("hidden");
+          });
+        }
+
+        if (contactButton) {
+          contactButton.addEventListener("click", function (e) {
+            e.preventDefault();
+            // Close modal before navigating to contact page
+            closeModalFunc();
+            // Navigate to contact page after a short delay to allow modal to close
+            setTimeout(() => {
+              window.location.href = "/contact.html";
+            }, 100);
+          });
+        }
+
+        if (modal) {
+          modal.addEventListener("click", function (e) {
+            if (e.target === modal) {
+              closeModalFunc();
+            }
+          });
+        }
+
+        // Close modal with Escape key
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && modal.classList.contains("show")) {
+            closeModalFunc();
+          }
+        });
+
+        // Video modal event listeners
+        const videoModal = document.getElementById("video-modal");
+        if (videoModal) {
+          videoModal.addEventListener("click", function (e) {
+            if (e.target === videoModal) {
+              const tutorialVideo = document.getElementById("tutorial-video");
+              if (tutorialVideo) tutorialVideo.src = "";
+              videoModal.classList.remove("show");
+              document.body.style.overflow = "";
+            }
+          });
+
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && videoModal.classList.contains("show")) {
+              const tutorialVideo = document.getElementById("tutorial-video");
+              if (tutorialVideo) tutorialVideo.src = "";
+              videoModal.classList.remove("show");
+              document.body.style.overflow = "";
+            }
+          });
+        }
+      });
+    </script>
+
+    <!-- hero section  -->
+    <header
+      class="flex relative max-w-[90vw] m-auto min-h-[100vh] md:h-[100vh] items-center justify-between pt-[10vh] md:pt-0"
+    >
+      <!-- image  -->
+      <img
+        class="hidden md:block h-[85%] absolute bottom-0 right-0"
+        src="https://res.cloudinary.com/dauv815j5/image/upload/v1759748374/Group_14_ru7pjs.webp"
+        alt=""
+        style="mix-blend-mode: multiply"
+        data-aos="fade-up"
+      />
+
+      <!-- about  -->
+      <div class="relative md:absolute md:top-[30%] w-full md:w-[60vw]">
+        <h1
+          class="flex flex-wrap md:flex-nowrap text-3xl md:text-5xl items-center min-w-max gap-2 md:gap-3"
+          id="hero-title"
+          data-typing-group
+        >
+          <span class="font-bold" data-typing-text>TASK</span>
+          <span class="font-bold text-[var(--primary)]" data-typing-text
+            >REPORTING,</span
+          >
+          <span class="font-[200]" data-typing-text>SIMPLIFIED</span>
+        </h1>
+        <p class="my-4">
+          Turn complexity into clarity with our smart task reporting platform.
+          Effortlessly track progress, uncover<span class="hidden md:inline">
+            <br
+          /></span>
+          bottlenecks, and boost productivity using real-time insights and
+          powerful analytics.<span class="hidden md:inline"> <br /></span>
+        </p>
+        <div class="flex items-center flex-col md:flex-row gap-2">
+          <a
+            target="_blank"
+            href="https://system.taskreportingsystem.com/"
+            class="rounded-full gradient text-center px-6 md:px-8 w-max py-3 md:py-4 mt-[1.5rem] md:mt-[4rem] inline-block"
+            >Getting Started
+          </a>
+          <button
+            id="glimpse-modal-trigger"
+            class="border rounded-full text-center px-6 md:px-8 py-3 md:py-4 gap-2 mt-[1.5rem] md:mt-[4rem] inline-block"
+          >
+            <i class="fa fa-eye mr-2" aria-hidden="true"></i>
+            <span>Get a glimpse</span>
+          </button>
+
+          <!-- Video Modal -->
+          <div
+            id="video-modal"
+            class="modal-overlay fixed inset-0 bg-black/80 z-[2000] flex items-center justify-center p-4"
+            style="display: none"
+          >
+            <div
+              class="modal-content bg-[var(--paper)] rounded-lg max-w-4xl w-[90vw] md:w-full p-6 relative shadow-2xl"
+            >
+              <button
+                id="close-video-modal"
+                class="absolute top-4 right-4 text-gray-500 p-2"
+              >
+                <i class="fa-solid fa-times text-xl"></i>
+              </button>
+
+              <h3 class="text-2xl font-bold mb-6 text-center">
+                Tutorial Video
+              </h3>
+
+              <div class="aspect-video w-full relative">
+                <!-- Skeleton Loader -->
+                <div
+                  id="video-skeleton"
+                  class="absolute inset-0 bg-gray-200 rounded-lg animate-pulse flex items-center justify-center"
+                >
+                  <div class="text-center">
+                    <div
+                      class="w-16 h-16 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center"
+                    >
+                      <i class="fa-solid fa-play text-gray-400 text-2xl"></i>
+                    </div>
+                    <div
+                      class="h-4 bg-gray-300 rounded w-32 mx-auto mb-2"
+                    ></div>
+                    <div class="h-3 bg-gray-300 rounded w-24 mx-auto"></div>
+                  </div>
+                </div>
+
+                <iframe
+                  id="tutorial-video"
+                  width="100%"
+                  height="100%"
+                  src=""
+                  title="Tutorial Video"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                  class="rounded-lg opacity-0 transition-opacity duration-300"
+                  onload="document.getElementById('video-skeleton').style.display='none'; this.style.opacity='1';"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const videoModal = document.getElementById("video-modal");
+              const closeVideoModal =
+                document.getElementById("close-video-modal");
+
+              function closeVideoModalFunc() {
+                const tutorialVideo = document.getElementById("tutorial-video");
+                if (tutorialVideo) tutorialVideo.src = "";
+                if (videoModal) videoModal.classList.remove("show");
+                document.body.style.overflow = "";
+              }
+
+              if (closeVideoModal) {
+                closeVideoModal.addEventListener("click", closeVideoModalFunc);
+              }
+
+              videoModal.addEventListener("click", function (e) {
+                if (e.target === videoModal) {
+                  closeVideoModalFunc();
+                }
+              });
+
+              document.addEventListener("keydown", function (e) {
+                if (
+                  e.key === "Escape" &&
+                  videoModal.classList.contains("show")
+                ) {
+                  closeVideoModalFunc();
+                }
+              });
+            });
+          </script>
+        </div>
+      </div>
+
+      <!-- statistics  -->
+      <div
+        class="md:flex flex-col md:flex-row bg-white/30 items-stretch md:items-center justify-center gap-3 md:gap-4 p-4 md:p-10 bottom-auto md:bottom-[5%] md:rounded-lg border backdrop-blur-sm border-white/50 right-auto md:right-[35%] relative md:absolute mt-6 md:mt-0 w-full md:w-auto max-w-[520px] md:max-w-none mx-auto md:mx-0 hidden"
+        data-aos="fade-up"
+      >
+        <div
+          class="bg-[var(--paper)] rounded-lg py-4 md:py-6 px-6 md:px-10 flex-1 md:flex-none"
+        >
+          <span class="flex items-end"
+            ><h2 class="text-2xl md:text-5xl" data-count-to="45">45</h2>
+            <span class="text-xl md:text-2xl">+</span></span
+          >
+          <p class="mt-2">Companies joined</p>
+        </div>
+        <div
+          class="backdrop-blur-lg bg-white/10 border border-white/50 shadow-lg rounded-lg py-4 md:py-6 px-6 md:px-10 flex-1 md:flex-none"
+        >
+          <span class="flex items-end"
+            ><h2 class="text-2xl md:text-5xl" data-count-to="200">200</h2>
+            <span class="text-xl md:text-2xl">+</span></span
+          >
+          <p class="mt-2">Active users</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- features  -->
+    <section class="bg-[var(--paper)] py-[10vw]">
+      <div class="max-w-[90vw] m-auto">
+        <h1
+          class="text-2xl md:text-3xl m-auto font-bold bg-gradient-to-r from-black to-[var(--primary)] bg-clip-text text-transparent w-max"
+        >
+          Powerful Features That Drive Results
+        </h1>
+
+        <p class="text-center opacity-50 mt-2 mb-10">
+          Everything you need to streamline task management and boost team
+          productivity
+        </p>
+
+        <div
+          class="flex flex-col md:flex-row items-stretch justify-stretch gap-3"
+        >
+          <div
+            class="flex-1 bg-[var(--pale)] rounded p-2 text-center p-6 md:p-8"
+            data-aos="fade-up"
+          >
+            <i
+              class="fa-solid fa-chart-simple text-xl md:text-2xl bg-[var(--pale-dark)] text-[var(--primary)] p-6 md:p-8 rounded-full mb-6 md:mb-8"
+            ></i>
+            <h3 class="text-[1.2rem] font-[600]">Real-Time Analytics</h3>
+            <p class="opacity-50 mt-3">
+              Track task progress and boost team productivity instantly with
+              live dashboards and fully customizable reports.
+            </p>
+          </div>
+          <div
+            class="flex-1 gradient rounded p-2 text-center p-6 md:p-8"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <i
+              class="fa-solid fa-file text-xl md:text-2xl bg-[var(--primary-very-light)] text-[var(--paper)] p-6 md:p-8 rounded-full mb-6 md:mb-8"
+            ></i>
+            <h3 class="text-[1.2rem] font-[600]">Instant Insights</h3>
+            <p class="opacity-80 mt-3">
+              Create detailed reports in seconds instead of hours. Focus on
+              action, not analysis.
+            </p>
+          </div>
+          <div
+            class="flex-1 bg-[var(--pale)] rounded p-2 text-center p-6 md:p-8"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <i
+              class="fa-solid fa-mobile-screen-button text-xl md:text-2xl bg-[var(--pale-dark)] text-[var(--primary)] p-6 md:p-8 rounded-full mb-6 md:mb-8"
+            ></i>
+            <h3 class="text-[1.2rem] font-[600]">On-the-Go Access</h3>
+            <p class="opacity-50 mt-3">
+              View your reports and manage tasks anytime, anywhere with our
+              fully responsive platform.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- help consultants  -->
+    <div
+      class="bg-[var(--dark)] relative flex flex-col md:flex-row justify-between h-auto md:h-[70vh]"
+    >
+      <div
+        data-aos="fade-right"
+        class="flex flex-col justify-center text-[var(--pale)] p-6 md:p-[5vw] w-full md:w-[50%] rounded-lg m-4"
+      >
+        <h2 class="text-2xl md:text-3xl font-[600]">
+          How Task Reporting Systems Empower Consultants to Work Remotely
+        </h2>
+        <p class="mt-4 md:max-w-[80%] opacity-80">
+          Modern task reporting systems give consultants the freedom to work
+          from anywhere by delivering real-time project visibility that builds
+          client trust. With automated progress tracking, instant report
+          generation and seamless multi-client management, consultants can
+          maintain top-tier professionalism without being tied to an office. By
+          reducing reliance on lengthy status meetings and endless email chains,
+          these tools streamline workflows, boost productivity and enhance
+          client satisfaction making remote consulting not just possible, but
+          highly efficient.
+        </p>
+      </div>
+      <img
+        class="w-full md:w-[50%] md:absolute md:right-0 md:h-full object-cover h-[40vh]"
+        src="https://res.cloudinary.com/dauv815j5/image/upload/v1759748375/Mask_group_l5zovs.webp"
+        alt=""
+        data-aos="fade-left"
+      />
+    </div>
+
+    <!-- excel diss  -->
+    <div
+      class="min-h-[70vh] md:h-[100vh] flex items-center justify-center relative px-4"
+    >
+      <img
+        src="https://res.cloudinary.com/dauv815j5/image/upload/v1759748374/google-sheets-icon_1_pgagba.webp"
+        class="hidden md:block absolute h-[60%] right-0 top-0"
+        alt=""
+        style="mix-blend-mode: multiply"
+        data-parallax-speed="0.25"
+        data-aos="fade-down-left"
+      />
+
+      <div
+        class="flex flex-col md:flex-row items-center justify-center z-[500] gap-6 md:gap-3 h-auto md:h-[90%] w-full md:w-[70%]"
+      >
+        <img
+          src="https://res.cloudinary.com/dauv815j5/image/upload/v1759748900/Group_11_kzuk2c.svg"
+          class="h-auto md:h-full w-full md:w-auto"
+          alt=""
+          data-aos="fade-right"
+        />
+        <div class="px-2 md:px-0">
+          <h3 class="text-xl md:text-2xl font-[600]">
+            Stop Drowning in Spreadsheets .Simplify Your Workflow
+          </h3>
+          <p class="opacity-50 my-3 md:my-5">
+            Manual tracking slows you down. Upgrade to intelligent task
+            management software that automates repetitive work and delivers
+            actionable insights. Boost productivity, cut errors and focus on
+            what really drives results.
+          </p>
+
+          <div class="mb-6 lg:mb-0 w-full md:w-max rounded-lg">
+            <ul class="flex flex-col gap-4 justify-between">
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/radio.svg" alt="" />
+                Reduce reporting time by 75%
+              </li>
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/radio.svg" alt="" />
+
+                Identify bottlenecks before they impact delivery
+              </li>
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/radio.svg" alt="" />
+
+                Improve team accountability and transparency
+              </li>
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/radio.svg" alt="" />
+
+                Make data-driven decisions with confidence
+              </li>
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/radio.svg" alt="" />
+                Scale your processes as your team grows
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- pricing  -->
+    <div
+      class="text-[var(--paper)] bg-[url(/assets/images/pricing-bg.svg)] py-[10vw] bg-center bg-cover"
+    >
+      <div class="m-auto h-full max-w-[90vw]">
+        <h2 class="text-2xl md:text-3xl font-bold">Pricing for Freelancers</h2>
+        <p class="opacity-70 mt-2">
+          Select the plan that aligns with your business needs
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          <!-- Explorer Plan -->
+          <div
+            class="flex-1 border flex flex-col justify-between border-[var(--paper)]/30 bg-[#FFB76A]/50 p-6 md:p-8 rounded-lg backdrop-blur-sm"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <h3 class="text-[1.5rem] font-[200]">Explorer Plan</h3>
+            <h2 class="text-3xl font-[600]">Free</h2>
+            <p class="text-[1rem]">includes up to 10 companies</p>
+            <p class="my-4 md:my-8">
+              Perfect for freelancers ready to experience how the platform
+              enhances consultant management and performance visibility.
+            </p>
+            <ul class="flex flex-col gap-4 justify-between">
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/check.svg" alt="" />
+                Up to 10 companies
+              </li>
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/check.svg" alt="" />
+                Consultant tracking
+              </li>
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/check.svg" alt="" />
+                Real-time performance analytics and dashboards
+              </li>
+              <!-- <li class="flex items-start leading-normal gap-2">
+                <img class="h-5 " src="./assets/icons/check.svg" alt="" />
+                Automated invoicing
+              </li>
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5 " src="./assets/icons/check.svg" alt="" />
+                Data export (PDF & CSV)
+              </li> -->
+              <!-- <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/check.svg" alt="" />
+                Role-based permissions and access control
+              </li> -->
+            </ul>
+            <a
+              href="https://system.taskreportingsystem.com/"
+              target="_blank"
+              class="rounded-full mt-4 p-3 md:p-4 text-center text-[var(--primary)] bg-[var(--paper)] block hover:bg-gray-50 transition-colors duration-200"
+            >
+              Getting Started
+            </a>
+          </div>
+
+          <!-- Professional month Plan -->
+          <div
+            class="flex-1 border flex flex-col justify-between border-[var(--paper)]/30 bg-[#FFB76A]/50 p-6 md:p-8 rounded-lg backdrop-blur-sm"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <h3 class="text-[1.5rem] font-[200]">Professional Plan</h3>
+            <h2 class="text-3xl font-[600]">$9.70 / Month</h2>
+            <!-- <p class="text-[1rem]">includes up to 25 consultants</p> -->
+            <p class="my-4 md:my-8">
+              Designed for growing freelancers that require structured oversight
+              and streamlined consultant performance tracking.
+            </p>
+            <ul class="flex flex-col gap-4 justify-between">
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/check.svg" alt="" />
+                Unlimited companies
+              </li>
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/check.svg" alt="" />
+                Consultant tracking
+              </li>
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/check.svg" alt="" />
+                Real-time performance analytics and dashboards
+              </li>
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/check.svg" alt="" />
+                Automated invoicing
+              </li>
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/check.svg" alt="" />
+                Data export (PDF & CSV)
+              </li>
+              <!-- <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/check.svg" alt="" />
+                Role-based permissions and access control
+              </li> -->
+            </ul>
+            <a
+              href="https://system.taskreportingsystem.com/"
+              target="_blank"
+              class="rounded-full mt-4 p-3 md:p-4 text-center text-[var(--paper)] bg-[#D77001] block hover:bg-[#C66601] transition-colors duration-200"
+            >
+              Getting Started
+            </a>
+          </div>
+
+          <!-- Professional year Plan -->
+          <div
+            class="flex-1 border flex flex-col justify-between border-[var(--paper)]/30 bg-[#FFB76A]/50 p-6 md:p-8 rounded-lg backdrop-blur-sm"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <h3 class="text-[1.5rem] font-[200]">Professional Plan</h3>
+            <h2 class="text-3xl font-[600]">$90 / Year</h2>
+            <!-- <p class="text-[1rem]">includes up to 25 consultants</p> -->
+            <p class="my-4 md:my-8">
+              Designed for growing freelancers that require structured oversight
+              and streamlined consultant performance tracking.
+            </p>
+            <ul class="flex flex-col gap-4 justify-between">
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/check.svg" alt="" />
+                Unlimited companies
+              </li>
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/check.svg" alt="" />
+                Consultant tracking
+              </li>
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/check.svg" alt="" />
+                Real-time performance analytics and dashboards
+              </li>
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/check.svg" alt="" />
+                Automated invoicing
+              </li>
+              <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/check.svg" alt="" />
+                Data export (PDF & CSV)
+              </li>
+              <!-- <li class="flex items-start leading-normal gap-2">
+                <img class="h-5" src="./assets/icons/check.svg" alt="" />
+                Role-based permissions and access control
+              </li> -->
+            </ul>
+            <a
+              href="https://system.taskreportingsystem.com/"
+              target="_blank"
+              class="rounded-full mt-4 p-3 md:p-4 text-center text-[var(--paper)] bg-[#D77001] block hover:bg-[#C66601] transition-colors duration-200"
+            >
+              Getting Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- pricing  -->
+
+    <!-- footer  -->
+    <footer
+      class="h-auto bg-[var(--paper)] md:h-[40vh] py-[5vw]"
+      data-aos="fade-in"
+    >
+      <div class="m-auto max-w-[90vw]">
+        <div
+          class="grid grid-cols-2 md:flex items-stretch gap-4 md:gap-2 justify-stretch"
+        >
+          <div class="flex-1 col-span-2 md:col-span-1">
+            <img
+              src="./assets/icons/logo.svg"
+              class="mb-4 h-[60px] rounded-lg"
+              alt=""
+            />
+          </div>
+          <div class="flex-1">
+            <div class="text-xl md:text-2xl font-bold">Company</div>
+            <p class="mt-3 opacity-50">
+              United Kingdom 2nd Floor,Mansion House. <br />
+              41 Guild Hall Lane, Leicester LE1 5FQ
+            </p>
+          </div>
+          <div class="flex-1">
+            <div class="text-xl md:text-2xl font-bold">Policies</div>
+            <p class="mt-3 opacity-50">
+              Accessibility <br />
+              <u> Complaints & Procedure Privacy</u> <br />
+              Notes
+            </p>
+          </div>
+          <div class="flex-1">
+            <div class="text-xl md:text-2xl font-bold">Contact Us</div>
+            <p class="mt-3 opacity-50">
+              Tel: Number +44 (0) 116 402 8136 <br />
+              Email: info@tekjuice.co.uk
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- AOS script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.AOS && typeof AOS.init === "function") {
+          AOS.init({
+            disable: function () {
+              return (
+                (window.innerWidth || document.documentElement.clientWidth) <
+                768
+              );
+            },
+            once: true,
+            duration: 700,
+            easing: "ease-out-cubic",
+            offset: 40,
+          });
+        }
+      });
+    </script>
+
+    <!-- chatbot  -->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/68d4ec021091db195464e5ad/1j5vrjqp0";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+  </body>
+</html>
