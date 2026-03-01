@@ -1,6 +1,6 @@
-# TRS Website
+# HustleIN Website
 
-A fast, responsive, static marketing site built with semantic HTML, modern CSS, and a small amount of vanilla JavaScript. This repository contains the source for the TekJuice TRS website.
+A fast, responsive, static marketing site built with semantic HTML, modern CSS, and a small amount of vanilla JavaScript. This repository contains the source for the TekJuice HustleIN website.
 
 ## Features
 
@@ -26,8 +26,8 @@ You can run this site locally using any static file server. No build step is req
 ### Clone the repository
 
 ```bash
-git clone https://github.com/tekjuice/trs-website.git
-cd trs-website
+git clone https://github.com/tekjuice/Hustle-in-website.git
+cd HustleIN-website
 ```
 
 ### Run locally
@@ -49,7 +49,7 @@ Option 2: Using VS Code Live Server
 ## Project structure
 
 ```
-trs-website/
+HustleIN-website/
 ├─ assets/
 │  ├─ icons/
 │  │  ├─ check.svg

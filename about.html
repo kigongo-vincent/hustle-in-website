@@ -30,7 +30,9 @@
     <div
       class="fixed z-[1000] top-0 left-0 w-full bg-[var(--paper)] py-4 md:py-2"
     >
-      <nav class="flex items-center h-full justify-between max-w-[90vw] m-auto">
+      <nav
+        class="flex pl-5 sm:pl-0 items-center h-full justify-between max-w-[90vw] m-auto"
+      >
         <!-- logo  -->
         <!-- <img class="logo" src="./assets/icons/logo.svg" alt="" /> -->
         <img
@@ -41,24 +43,22 @@
 
         <!-- links  -->
         <div class="hidden md:flex gap-6 items-center justify-between">
-          <a href="/index.html">Home</a>
+          <a href="/index.html" class="opacity-50">Home</a>
           <a href="/about.html">About Us</a>
-          <a href="/contact.html">Contact Us</a>
-          <!-- <button
+          <a href="/contact.html" class="opacity-50">Contact Us</a>
+          <button
             id="demo-modal-trigger"
-            class="rounded px-4 py-3 text-[var(--paper)] border bg-[var(--primary)]"
-          >
-            Request a demo
-          </button> -->
+            class="rounded w-0 py-3 text-[var(--paper)] border bg-[var(--primary)] hover:opacity-90"
+          ></button>
         </div>
 
         <!-- mobile menu button -->
         <button
-          class="md:hidden h-10 w-10 flex items-center justify-center rounded-lg border-2 border-[var(--primary)] bg-white shadow-sm hover:bg-gray-50 transition-all duration-200"
+          class="md:hidden h-10 w-10 flex items-center justify-center rounded transition-all duration-200"
           aria-label="Toggle menu"
           id="mobile-menu-toggle"
         >
-          <i class="fa-solid fa-bars text-xl text-[var(--primary)]"></i>
+          <i class="fa-solid fa-bars text-2xl text-[var(--primary)]"></i>
         </button>
       </nav>
 
@@ -70,12 +70,12 @@
         <div class="max-w-[90vw] m-auto py-4 flex flex-col gap-3">
           <a
             href="/index.html"
-            class="py-2 text-[var(--primary)] transition-colors duration-200 hover:text-[var(--primary)]/80"
+            class="py-2 transition-colors duration-200 hover:text-[var(--primary)]/80"
             >Home</a
           >
           <a
             href="/about.html"
-            class="py-2 transition-colors duration-200 hover:text-[var(--primary)]"
+            class="py-2 transition-colors text-[var(--primary)] duration-200 hover:text-[var(--primary)]"
             >About Us</a
           >
           <a
@@ -83,18 +83,18 @@
             class="py-2 transition-colors duration-200 hover:text-[var(--primary)]"
             >Contact Us</a
           >
-          <button
+          <!-- <button
             id="demo-modal-trigger-mobile"
-            class="rounded-full px-4 py-2 text-center text-[var(--primary)] border border-[var(--primary)] transition-all duration-200 hover:bg-[var(--primary)] hover:text-white transform hover:scale-[1.02] active:scale-[0.98]"
+            class="rounded px-4 py-2 text-center text-[var(--primary)] border border-[var(--primary)] transition-all duration-200 hover:bg-[var(--primary)] hover:text-white transform hover:scale-[1.02] active:scale-[0.98]"
           >
             Request a demo
           </button>
           <a
             target="_blank"
-            href="https://system.taskreportingsystem.com/"
-            class="rounded-full px-4 py-2 text-center text-[var(--primary)] border border-[var(--primary)] transition-all duration-200 hover:bg-[var(--primary)] hover:text-white transform hover:scale-[1.02] active:scale-[0.98]"
+            href="https://app.hustlein.net/"
+            class="rounded px-4 py-2 text-center text-[var(--primary)] border border-[var(--primary)] transition-all duration-200 hover:bg-[var(--primary)] hover:text-white transform hover:scale-[1.02] active:scale-[0.98]"
             >Getting Started</a
-          >
+          > -->
         </div>
       </div>
     </div>
@@ -129,20 +129,17 @@
             trust across every project.
           </p>
 
-          <p class="mt-8">
-            <a
-              href="https://system.taskreportingsystem.com"
-              class="gradient mt-4 p-4 rounded w-full md:w-auto"
-            >
+          <a class="mt-8" href="https://app.hustlein.net">
+            <p class="gradient mt-4 p-4 rounded w-full text-center md:w-max">
               Getting Started Today
-            </a>
-          </p>
+            </p>
+          </a>
         </div>
 
         <!-- right: big Hustle IN with image fill -->
         <div class="relative" data-aos="fade-left">
           <div
-            class="hero-Hustle IN relative text-transparent font-extrabold leading-[0.8] text-[40vw] select-none"
+            class="hero-Hustle IN relative text-transparent font-extrabold leading-[0.8] text-[40vw] select-none md:block hidden"
             style="
               background-image: url('https://res.cloudinary.com/dauv815j5/image/upload/v1759823146/pexels-photo-5240149_m1kzam.webp');
               background-size: cover;
@@ -167,7 +164,7 @@
       class="py-[5vw] bg-[var(--paper)] flex flex-col items-center justify-center mt-6"
     >
       <div class="max-w-[90vw] md:max-w-[50vw] text-center opacity-80 m-auto">
-        <h1 class="text-4xl font-bold mb-6">
+        <h1 class="md:text-4xl text-2xl font-bold mb-6">
           What <span class="text-[var(--primary)]">Do</span> we do?
         </h1>
         <p class="font-medium mb-4 underline">
@@ -224,7 +221,7 @@
           all-in-one task reporting solution.
         </p>
 
-        <a href="https://system.taskreportingsystem.com">
+        <a href="https://app.hustlein.net">
           <button class="px-6 py-3 bg-[var(--pale)] rounded-full mt-5">
             Getting Started with our platform
           </button>
@@ -246,10 +243,10 @@
       <div
         class="backdrop-blur-lg text-[var(--paper)] bg-black/40 h-full w-full absolute top-0 left-0 flex flex-col items-center justify-center p-[5vw]"
       >
-        <p class="text-5xl font-light">
+        <p class="md:text-4xl text-3xl font-light">
           Ready to Level Up Your Team’s Productivity?
         </p>
-        <p class="text-center md:max-w-[40vw] mt-5">
+        <p class="md:text-center text-left md:max-w-[40vw] mt-5">
           Stop chasing updates and start seeing progress with an intuitive task
           reporting app that turns data into direction. Enjoy seamless
           reporting, instant insights and custom dashboards that adapt to how
@@ -257,8 +254,8 @@
           control are just one click away.
         </p>
         <a
-          href="https://system.taskreportingsystem.com"
-          class="backdrop-blur-sm text-center rounded-full border-white/30 border bg-transparent mt-4 rounded px-8 py-3"
+          href="https://app.hustlein.net"
+          class="backdrop-blur-sm text-center rounded border-white/30 border bg-transparent mt-4 rounded px-8 py-3 md:w-max w-full"
         >
           Getting Started Today
         </a>
@@ -277,13 +274,13 @@
           <div class="flex-1 col-span-2 md:col-span-1">
             <!-- <img class="logo" src="./assets/icons/logo.svg" alt="" /> -->
             <img
-              class="logo"
+              class="logo pl-4 md:pl-0"
               src="https://res.cloudinary.com/dauv815j5/image/upload/v1772111855/Hustle_In_No_BG_White_mrnrrl.png"
               alt=""
             />
             <!-- <img
               src="./assets/icons/logo.svg"
-              class="mb-4 h-[60px] rounded-lg"
+              class="mb-4 h-[60px] rounded"
               alt=""
             /> -->
           </div>

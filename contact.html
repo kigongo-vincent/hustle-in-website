@@ -27,7 +27,13 @@
   </head>
   <body class="bg-[var(--paper)]">
     <!-- navbar  -->
-    <nav class="flex items-center h-full justify-between max-w-[90vw] m-auto">
+
+     <div
+      class="fixed z-[1000] top-0 left-0 w-full bg-[var(--paper)] py-4 md:py-2"
+    >
+      <nav
+        class="flex pl-5 sm:pl-0 items-center h-full justify-between max-w-[90vw] m-auto"
+      >
         <!-- logo  -->
         <!-- <img class="logo" src="./assets/icons/logo.svg" alt="" /> -->
         <img
@@ -38,37 +44,72 @@
 
         <!-- links  -->
         <div class="hidden md:flex gap-6 items-center justify-between">
-          <a href="/index.html">Home</a>
-          <a href="/about.html">About Us</a>
-          <a href="/contact.html">Contact Us</a>
-          <!-- <button
+          <a href="/index.html" class="opacity-50">Home</a>
+          <a href="/about.html" class="opacity-50">About Us</a>
+          <a href="/contact.html" >Contact Us</a>
+          <button
             id="demo-modal-trigger"
-            class="rounded px-4 py-3 text-[var(--paper)] border bg-[var(--primary)]"
-          >
-            Request a demo
-          </button> -->
+            class="rounded w-0 py-3 text-[var(--paper)] border bg-[var(--primary)] hover:opacity-90"
+          ></button>
         </div>
 
         <!-- mobile menu button -->
         <button
-          class="md:hidden h-10 w-10 flex items-center justify-center rounded-lg border-2 border-[var(--primary)] bg-white shadow-sm hover:bg-gray-50 transition-all duration-200"
+          class="md:hidden h-10 w-10 flex items-center justify-center rounded transition-all duration-200"
           aria-label="Toggle menu"
           id="mobile-menu-toggle"
         >
-          <i class="fa-solid fa-bars text-xl text-[var(--primary)]"></i>
+          <i class="fa-solid fa-bars text-2xl text-[var(--primary)]"></i>
         </button>
       </nav>
 
+      <!-- mobile dropdown -->
+      <div
+        id="mobile-menu"
+        class="md:hidden bg-[var(--paper)] border-t border-black/10 hidden"
+      >
+        <div class="max-w-[90vw] m-auto py-4 flex flex-col gap-3">
+          <a
+            href="/index.html"
+            class="py-2 transition-colors duration-200 hover:text-[var(--primary)]/80"
+            >Home</a
+          >
+          <a
+            href="/about.html"
+            class="py-2 transition-colors  duration-200 hover:text-[var(--primary)]"
+            >About Us</a
+          >
+          <a
+            href="/contact.html"
+            class="py-2 transition-colors text-[var(--primary)] duration-200 hover:text-[var(--primary)]"
+            >Contact Us</a
+          >
+          <!-- <button
+            id="demo-modal-trigger-mobile"
+            class="rounded px-4 py-2 text-center text-[var(--primary)] border border-[var(--primary)] transition-all duration-200 hover:bg-[var(--primary)] hover:text-white transform hover:scale-[1.02] active:scale-[0.98]"
+          >
+            Request a demo
+          </button>
+          <a
+            target="_blank"
+            href="https://app.hustlein.net/"
+            class="rounded px-4 py-2 text-center text-[var(--primary)] border border-[var(--primary)] transition-all duration-200 hover:bg-[var(--primary)] hover:text-white transform hover:scale-[1.02] active:scale-[0.98]"
+            >Getting Started</a
+          > -->
+        </div>
+      </div>
+    </div>
+
     <!-- hero -->
-    <div class="bg-[var(--pale)]  bg-top bg-cover ">
+    <div class="bg-[var(--primary)] text-white  bg-center bg-contain ">
       <header
         class="flex relative max-w-[90vw] m-auto min-h-[30vh] items-center justify-between pt-[12vh]"
       >
         <div class="w-full" data-aos="fade-left">
           <div class="flex items-center gap-2">
             
-            <h1 class="text-2xl md:text-3xl font-bold">
-            Get in <span class="text-[var(--primary)]">touch</span>
+            <h1 class="text-2xl md:text-3xl font-[900] uppercase">
+            Get in <span class="text-[var(--secondary)]">touch</span>
           </h1></div>
           <p class="my-4 opacity-80">
             We would love to hear from you. Send a message and our team will respond
@@ -156,7 +197,7 @@
     </section>
 
     <!-- footer  (same as index) -->
-   <footer
+    <footer
       class="h-auto md:h-[40vh] py-[5vw] bg-black text-white"
       data-aos="fade-in"
     >
@@ -167,13 +208,13 @@
           <div class="flex-1 col-span-2 md:col-span-1">
             <!-- <img class="logo" src="./assets/icons/logo.svg" alt="" /> -->
             <img
-              class="logo"
+              class="logo pl-4 md:pl-0"
               src="https://res.cloudinary.com/dauv815j5/image/upload/v1772111855/Hustle_In_No_BG_White_mrnrrl.png"
               alt=""
             />
             <!-- <img
               src="./assets/icons/logo.svg"
-              class="mb-4 h-[60px] rounded-lg"
+              class="mb-4 h-[60px] rounded"
               alt=""
             /> -->
           </div>

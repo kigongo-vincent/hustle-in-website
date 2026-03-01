@@ -50,7 +50,7 @@
               </li>
             </ul>
             <a
-              href="https://system.taskreportingsystem.com/"
+              href="https://app.hustlein.net/"
               target="_blank"
               class="rounded-full mt-4 p-3 md:p-4 text-center text-[var(--primary)] bg-[var(--paper)] block hover:bg-gray-50 transition-colors duration-200"
             >
@@ -98,7 +98,7 @@
               </li>
             </ul>
             <a
-              href="https://system.taskreportingsystem.com/"
+              href="https://app.hustlein.net/"
               target="_blank"
               class="rounded-full mt-4 p-3 md:p-4 text-center text-[var(--paper)] bg-[#D77001] block hover:bg-[#C66601] transition-colors duration-200"
             >
@@ -146,7 +146,7 @@
               </li>
             </ul>
             <a
-              href="https://system.taskreportingsystem.com/"
+              href="https://app.hustlein.net/"
               target="_blank"
               class="rounded-full mt-4 p-3 md:p-4 text-center text-[var(--primary)] bg-[var(--paper)] block hover:bg-gray-50 transition-colors duration-200"
             >
@@ -248,7 +248,7 @@
               </li>
             </ul>
             <a
-              href="https://system.taskreportingsystem.com/"
+              href="https://app.hustlein.net/"
               target="_blank"
               class="rounded-full mt-4 p-3 md:p-4 text-center text-[var(--primary)] bg-[var(--paper)] block hover:bg-gray-50 transition-colors duration-200"
             >
@@ -297,7 +297,7 @@
               </li>
             </ul>
             <a
-              href="https://system.taskreportingsystem.com/"
+              href="https://app.hustlein.net/"
               target="_blank"
               class="rounded-full mt-4 p-3 md:p-4 text-center text-[var(--paper)] bg-[var(--primary)] block hover:bg-[#C66601] transition-colors duration-200"
             >

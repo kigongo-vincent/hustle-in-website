@@ -62,7 +62,9 @@
     <div
       class="fixed z-[1000] top-0 left-0 w-full bg-[var(--paper)] py-4 md:py-2"
     >
-      <nav class="flex items-center h-full justify-between max-w-[90vw] m-auto">
+      <nav
+        class="flex pl-5 sm:pl-0 items-center h-full justify-between max-w-[90vw] m-auto"
+      >
         <!-- logo  -->
         <!-- <img class="logo" src="./assets/icons/logo.svg" alt="" /> -->
         <img
@@ -73,12 +75,12 @@
 
         <!-- links  -->
         <div class="hidden md:flex gap-6 items-center justify-between">
-          <a href="/index.html">Home</a>
-          <a href="/about.html">About Us</a>
-          <a href="/contact.html">Contact Us</a>
+          <a href="/index.html" class="">Home</a>
+          <a href="/about.html" class="opacity-50">About Us</a>
+          <a href="/contact.html" class="opacity-50">Contact Us</a>
           <button
             id="demo-modal-trigger"
-            class="rounded px-4 py-3 text-[var(--paper)] border bg-[var(--primary)]"
+            class="rounded px-4 py-3 text-[var(--paper)] border bg-[var(--primary)] hover:opacity-90"
           >
             Request a demo
           </button>
@@ -86,11 +88,11 @@
 
         <!-- mobile menu button -->
         <button
-          class="md:hidden h-10 w-10 flex items-center justify-center rounded-lg border-2 border-[var(--primary)] bg-white shadow-sm hover:bg-gray-50 transition-all duration-200"
+          class="md:hidden h-10 w-10 flex items-center justify-center rounded transition-all duration-200"
           aria-label="Toggle menu"
           id="mobile-menu-toggle"
         >
-          <i class="fa-solid fa-bars text-xl text-[var(--primary)]"></i>
+          <i class="fa-solid fa-bars text-2xl text-[var(--primary)]"></i>
         </button>
       </nav>
 
@@ -117,14 +119,14 @@
           >
           <button
             id="demo-modal-trigger-mobile"
-            class="rounded-full px-4 py-2 text-center text-[var(--primary)] border border-[var(--primary)] transition-all duration-200 hover:bg-[var(--primary)] hover:text-white transform hover:scale-[1.02] active:scale-[0.98]"
+            class="rounded px-4 py-2 text-center text-[var(--primary)] border border-[var(--primary)] transition-all duration-200 hover:bg-[var(--primary)] hover:text-white transform hover:scale-[1.02] active:scale-[0.98]"
           >
             Request a demo
           </button>
           <a
             target="_blank"
-            href="https://system.taskreportingsystem.com/"
-            class="rounded-full px-4 py-2 text-center text-[var(--primary)] border border-[var(--primary)] transition-all duration-200 hover:bg-[var(--primary)] hover:text-white transform hover:scale-[1.02] active:scale-[0.98]"
+            href="https://app.hustlein.net/"
+            class="rounded px-4 py-2 text-center text-[var(--primary)] border border-[var(--primary)] transition-all duration-200 hover:bg-[var(--primary)] hover:text-white transform hover:scale-[1.02] active:scale-[0.98]"
             >Getting Started</a
           >
         </div>
@@ -134,27 +136,26 @@
     <!-- Demo Request Modal -->
     <div
       id="demo-modal"
-      class="modal-overlay fixed inset-0 bg-black/80 z-[2000] flex items-center justify-center p-6"
-      style="display: none"
+      class="modal-overlay fixed inset-0 bg-black/10 z-[2000] flex items-center justify-center p-6"
     >
       <div
-        class="modal-content bg-[var(--paper)] rounded-lg max-w-3xl w-[90vw] md:w-full p-6 md:p-[3rem] relative shadow-2xl"
+        class="modal-content bg-[var(--paper)] rounded max-w-3xl w-[90vw] md:w-full p-6 md:p-[3rem] relative shadow-2xl"
       >
-        <button
+        <!-- <button
           id="close-modal"
           class="absolute top-4 right-4 text-gray-500 p-2 hover:text-gray-700 transition-colors duration-200"
         >
-          <i class="fa-solid fa-times text-xl"></i>
-        </button>
+          <i class="fa-solid fa-times text-3xl font-[100]"></i>
+        </button> -->
 
         <!-- Video Check Step -->
         <div id="video-check-step" class="text-center">
           <!-- Simple Icon -->
           <div class="glimpse-icon mb-6 opacity-0">
             <div
-              class="w-16 h-16 mx-auto bg-[var(--primary)] rounded-full flex items-center justify-center shadow-lg"
+              class="w-20 h-20 mx-auto bg-[var(--pale)] rounded-full flex items-center justify-center"
             >
-              <i class="fa fa-eye text-2xl text-white"></i>
+              <i class="fa fa-eye text-2xl"></i>
             </div>
           </div>
 
@@ -174,22 +175,15 @@
           >
             <button
               id="watched-yes"
-              class="bg-[var(--primary)] text-white py-3 px-8 rounded-lg hover:bg-[var(--primary)]/90 transition-all duration-200 font-medium flex-1 text-center"
+              class="bg-[var(--primary)] text-white py-3 px-8 rounded hover:bg-[var(--secondary)] transition-all duration-200 font-medium flex-1 text-center"
             >
               Yes, take me to the demo
             </button>
             <button
               id="watched-no"
-              class="border border-[var(--primary)] text-[var(--primary)] py-3 px-8 rounded-lg hover:bg-[var(--primary)] hover:text-white transition-all duration-200 font-medium flex-1 text-center"
+              class="border border-[var(--primary)] text-[var(--primary)] py-3 px-8 rounded hover:bg-[var(--primary)] hover:text-white transition-all duration-200 font-medium flex-1 text-center"
             >
               No, show me the video
-            </button>
-            <button
-              id="contact-button"
-              class="border border-[var(--primary)] text-[var(--primary)] py-3 px-8 rounded-lg hover:bg-[var(--primary)] hover:text-white transition-all duration-200 font-medium flex-1 text-center"
-              style="display: none"
-            >
-              Contact us for more information
             </button>
           </div>
         </div>
@@ -200,7 +194,7 @@
             id="video-select-back"
             class="absolute top-4 left-4 text-gray-500 p-2 hover:text-gray-700 transition-colors duration-200"
           >
-            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-arrow-left text-xl opacity-50"></i>
           </button>
 
           <h3 class="text-2xl font-bold mb-4">Choose a video</h3>
@@ -333,7 +327,7 @@
             modalTitle.textContent = "Request a Demo";
             modalDescription.textContent =
               "Choose how you'd like to experience our platform";
-            modalIcon.className = "fa fa-rocket text-2xl text-white";
+            modalIcon.className = "fa fa-rocket text-2xl text-[var(--primary)]";
             yesButton.textContent = "Try the live demo";
             noButton.textContent = "Watch tutorial video";
             if (contactButton) contactButton.style.display = "block";
@@ -342,7 +336,7 @@
             modalTitle.textContent = "Get a Glimpse";
             modalDescription.textContent =
               "Have you watched our tutorial video yet?";
-            modalIcon.className = "fa fa-eye text-2xl text-white";
+            modalIcon.className = "fa fa-eye text-2xl ";
             yesButton.textContent = "Yes, take me to the demo";
             noButton.textContent = "No, show me the video";
             if (contactButton) contactButton.style.display = "none";
@@ -432,10 +426,12 @@
 
         function showVideoSelection() {
           // hide the check step and show selection
-          if (videoCheckStep) videoCheckStep.classList.add("hidden");
-          const selectStep = document.getElementById("video-select-step");
-          if (selectStep) selectStep.classList.remove("hidden");
-          renderVideoList();
+          // if (videoCheckStep) videoCheckStep.classList.add("hidden");
+          // const selectStep = document.getElementById("video-select-step");
+          // if (selectStep) selectStep.classList.remove("hidden");
+          // renderVideoList();
+          // alert("clicked");
+          openVideoModalWithId(videos[3]?.id);
         }
 
         function renderVideoList() {
@@ -447,7 +443,7 @@
             // Card container
             const card = document.createElement("div");
             card.className =
-              "relative overflow-hidden rounded-lg shadow-sm cursor-pointer transform transition-transform hover:scale-[1.01]";
+              "relative overflow-hidden rounded shadow-sm cursor-pointer transform transition-transform hover:scale-[1.01]";
             card.setAttribute("role", "button");
             card.setAttribute("tabindex", "0");
 
@@ -609,7 +605,9 @@
     </script>
 
     <!-- hero section  -->
-    <div class="bg-sheets">
+    <div
+      class="bg-[url(https://images.pexels.com/photos/7794361/pexels-photo-7794361.jpeg)] bg-center bg-cover bg-fixed md:bg-[url()]"
+    >
       <header
         class="flex relative max-w-[90vw] m-auto min-h-[100vh] md:h-[100vh] items-center justify-between pt-[10vh] md:pt-0"
       >
@@ -622,9 +620,11 @@
         />
 
         <!-- about  -->
-        <div class="relative md:absolute md:top-[30%] pl-10 w-full md:w-[60vw]">
+        <div
+          class="relative md:absolute md:top-[30%] sm:pl-10 w-full md:w-[60vw]"
+        >
           <h1
-            class="flex flex-wrap font-bold md:flex-nowrap text-3xl md:text-4xl mt-5 items-center min-w-max gap-2 md:gap-3"
+            class="flex flex-wrap text-center justify-center sm:justify-start font-bold md:flex-nowrap text-2xl md:text-4xl mt-5 items-center min-w-max gap-2 md:gap-3"
             id="hero-title"
             data-typing-group
           >
@@ -632,7 +632,7 @@
             <span data-typing-text>REPORTING</span>
             <span class="" data-typing-text>SIMPLIFIED</span>
           </h1>
-          <p class="my-4">
+          <p class="my-4 text-center md:text-left">
             Turn complexity into clarity with our smart task reporting platform.
             Effortlessly track progress, uncover<span class="hidden md:inline">
               <br
@@ -643,13 +643,13 @@
           <div class="flex items-center flex-col md:flex-row gap-2">
             <a
               target="_blank"
-              href="https://system.taskreportingsystem.com/"
+              href="https://app.hustlein.net/"
               class="rounded gradient text-center px-6 md:px-4 w-max py-3 md:py-3 mt-[1.5rem] inline-block"
               >Getting Started
             </a>
             <button
               id="glimpse-modal-trigger"
-              class="text-white rounded text-center bg-[var(--secondary)] px-6 md:px-4 py-3 md:py-3 gap-2 mt-[1.5rem] inline-block"
+              class="text-white rounded text-center w-full sm:w-max bg-[var(--secondary)] px-6 md:px-4 py-3 md:py-3 gap-2 mt-[1.5rem] inline-block"
             >
               <i class="fa fa-eye mr-2" aria-hidden="true"></i>
               <span>Get a glimpse</span>
@@ -662,14 +662,14 @@
               style="display: none"
             >
               <div
-                class="modal-content bg-[var(--paper)] rounded-lg max-w-4xl w-[90vw] md:w-full p-6 relative shadow-2xl"
+                class="modal-content bg-[var(--paper)] rounded max-w-4xl w-[90vw] md:w-full p-6 relative shadow-2xl"
               >
-                <button
+                <!-- <button
                   id="close-video-modal"
                   class="absolute top-4 right-4 text-gray-500 p-2"
                 >
                   <i class="fa-solid fa-times text-xl"></i>
-                </button>
+                </button> -->
 
                 <h3 class="text-2xl font-bold mb-6 text-center">
                   Tutorial Video
@@ -679,7 +679,7 @@
                   <!-- Skeleton Loader -->
                   <div
                     id="video-skeleton"
-                    class="absolute inset-0 bg-gray-200 rounded-lg animate-pulse flex items-center justify-center"
+                    class="absolute inset-0 bg-gray-200 rounded animate-pulse flex items-center justify-center"
                   >
                     <div class="text-center">
                       <div
@@ -703,7 +703,7 @@
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
-                    class="rounded-lg opacity-0 transition-opacity duration-300"
+                    class="rounded opacity-0 transition-opacity duration-300"
                     onload="document.getElementById('video-skeleton').style.display='none'; this.style.opacity='1';"
                   >
                   </iframe>
@@ -781,7 +781,7 @@
     <section class="bg-[var(--paper)] py-[10vw]">
       <div class="max-w-[90vw] m-auto">
         <h1
-          class="text-2xl md:text-3xl m-auto font-bold bg-gradient-to-r from-black to-[var(--primary)] bg-clip-text text-transparent w-max"
+          class="text-xl md:text-3xl m-auto font-bold bg-gradient-to-r from-black to-[var(--primary)] bg-clip-text text-transparent w-max"
         >
           Powerful Features That Drive Results
         </h1>
@@ -795,12 +795,16 @@
           class="flex flex-col md:flex-row items-stretch justify-stretch gap-3"
         >
           <div
-            class="flex-1 bg-[var(--pale)] rounded p-2 text-center p-6 md:p-8"
+            class="flex-1 bg-[var(--pale)] flex flex-col items-center justify-center gap-4 rounded p-2 text-center p-10 md:p-8"
             data-aos="fade-up"
           >
-            <i
-              class="fa-solid fa-chart-simple text-xl md:text-2xl bg-[var(--pale-dark)] text-[var(--primary)] p-6 md:p-8 rounded-full mb-6 md:mb-8"
-            ></i>
+            <div
+              class="flex bg-[var(--pale-dark)] rounded-full h-20 w-20 items-center justify-center"
+            >
+              <i
+                class="fa-solid fa-chart-simple text-xl md:text-2xl text-[var(--primary)] rounded-full"
+              ></i>
+            </div>
             <h3 class="text-[1.2rem] font-[600]">Real-Time Analytics</h3>
             <p class="opacity-50 mt-3">
               Track task progress and boost team productivity instantly with
@@ -808,13 +812,17 @@
             </p>
           </div>
           <div
-            class="flex-1 gradient rounded p-2 text-center p-6 md:p-8"
+            class="flex-1 gradient flex flex-col items-center justify-center gap-4 rounded p-2 text-center p-10 md:p-8"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <i
-              class="fa-solid fa-file text-xl md:text-2xl bg-[var(--primary-very-light)] text-[var(--paper)] p-6 md:p-8 rounded-full mb-6 md:mb-8"
-            ></i>
+            <div
+              class="bg-[var(--primary-very-light)] rounded-full h-20 w-20 flex items-center justify-center"
+            >
+              <i
+                class="fa-solid fa-file text-xl md:text-2xl text-[var(--paper)]"
+              ></i>
+            </div>
             <h3 class="text-[1.2rem] font-[600]">Instant Insights</h3>
             <p class="opacity-80 mt-3">
               Create detailed reports in seconds instead of hours. Focus on
@@ -822,13 +830,17 @@
             </p>
           </div>
           <div
-            class="flex-1 bg-[var(--pale)] rounded p-2 text-center p-6 md:p-8"
+            class="flex-1 bg-[var(--pale)] flex flex-col items-center justify-center gap-4 rounded p-2 text-center p-10 md:p-8"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <i
-              class="fa-solid fa-mobile-screen-button text-xl md:text-2xl bg-[var(--pale-dark)] text-[var(--primary)] p-6 md:p-8 rounded-full mb-6 md:mb-8"
-            ></i>
+            <div
+              class="bg-[var(--pale-dark)] h-20 w-20 rounded-full flex items-center justify-center"
+            >
+              <i
+                class="fa-solid fa-mobile-screen-button text-xl md:text-2xl text-[var(--primary)]"
+              ></i>
+            </div>
             <h3 class="text-[1.2rem] font-[600]">On-the-Go Access</h3>
             <p class="opacity-50 mt-3">
               View your reports and manage tasks anytime, anywhere with our
@@ -845,12 +857,12 @@
     >
       <div
         data-aos="fade-right"
-        class="flex flex-col justify-center text-[var(--pale)] p-6 md:p-[5vw] w-full md:w-[50%] rounded-lg m-4"
+        class="flex flex-col justify-center text-[var(--pale)] p-8 md:p-[5vw] w-full md:w-[50%] rounded m-4"
       >
-        <h2 class="text-2xl md:text-3xl font-[600]">
-          How HustleIN Empower Consultants to Work Remotely
+        <h2 class="text-xl md:max-w-max max-w-[75vw] md:text-3xl font-[600]">
+          <span>How HustleIN Empower Consultants to Work Remotely</span>
         </h2>
-        <p class="mt-4 md:max-w-[80%] opacity-80">
+        <p class="mt-4 max-w-[90%] md:max-w-[80%] opacity-80">
           HustleIN give consultants the freedom to work from anywhere by
           delivering real-time project visibility that builds client trust. With
           automated progress tracking, instant report generation and seamless
@@ -905,7 +917,7 @@
             drives results.
           </p>
 
-          <div class="mb-6 lg:mb-0 w-full md:w-max rounded-lg">
+          <div class="mb-6 lg:mb-0 w-full md:w-max rounded">
             <ul class="flex flex-col gap-4 justify-between">
               <li class="flex items-start leading-normal gap-2">
                 <img class="h-5" src="./assets/icons/radio.svg" alt="" />
@@ -939,7 +951,15 @@
     <!-- pricing  -->
     <div class="bg-[var(--paper)] py-[10vw] bg-center bg-cover">
       <div class="m-auto h-full max-w-[90vw]">
-        <h2 class="text-2xl mb-4 text-center md:text-3xl leading-tight">
+        <h2
+          class="md:text-2xl text-xl mb-4 sm:hidden flex justify-center text-center md:text-3xl leading-tight"
+        >
+          pricing
+        </h2>
+
+        <h2
+          class="text-2xl mb-4 sm:block hidden text-center md:text-3xl leading-tight"
+        >
           <span class="opacity-30 mb-3"
             >Get more with our advanced packages</span
           >
@@ -947,7 +967,7 @@
           ranging from simple to advanced workflows
         </h2>
         <hr class="mb-4 opacity-10" />
-        <p class="opacity-70 text-center text-xl">
+        <p class="opacity-70 text-center md:text-xl">
           Select the plan that aligns with your business needs
         </p>
 
@@ -956,7 +976,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
           <!-- Explorer Plan -->
           <div
-            class="flex-1 border flex flex-col justify-between border-[var(--paper)]/30 shadow-custom p-6 md:p-8 rounded-lg backdrop-blur-sm"
+            class="flex-1 border flex flex-col justify-between border-[var(--paper)]/30 shadow-custom p-6 md:p-8 rounded backdrop-blur-sm"
             data-aos="fade-up"
             data-aos-delay="0"
           >
@@ -994,9 +1014,9 @@
               </li> -->
             </ul>
             <a
-              href="https://system.taskreportingsystem.com/"
+              href="https://app.hustlein.net/"
               target="_blank"
-              class="rounded-full mt-4 p-3 md:p-4 text-center text-[var(--primary)] bg-[var(--paper)] block hover:bg-gray-50 transition-colors duration-200"
+              class="rounded mt-4 p-3 md:p-4 text-center text-[var(--primary)] bg-[var(--paper)] block hover:bg-gray-50 transition-colors duration-200"
             >
               Getting Started
             </a>
@@ -1004,7 +1024,7 @@
 
           <!-- Professional month Plan -->
           <div
-            class="flex-1 border flex flex-col justify-between border-[var(--paper)]/30 shadow-n p-6 md:p-8 rounded-lg backdrop-blur-sm"
+            class="flex-1 border flex flex-col justify-between border-[var(--paper)]/30 shadow-n p-6 md:p-8 rounded backdrop-blur-sm"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -1046,9 +1066,9 @@
               </li> -->
             </ul>
             <a
-              href="https://system.taskreportingsystem.com/"
+              href="https://app.hustlein.net/"
               target="_blank"
-              class="rounded-full mt-4 p-3 md:p-4 text-center text-[var(--paper)] bg-[var(--secondary)] block hover:bg-[var(--primary)] transition-colors duration-200"
+              class="rounded mt-4 p-3 md:p-4 text-center text-[var(--paper)] bg-[var(--secondary)] block hover:bg-[var(--primary)] transition-colors duration-200"
             >
               Getting Started
             </a>
@@ -1056,7 +1076,7 @@
 
           <!-- Professional year Plan -->
           <div
-            class="flex-1 border flex flex-col justify-between border-[var(--paper)]/30 shadow-custom p-6 md:p-8 rounded-lg backdrop-blur-sm"
+            class="flex-1 border flex flex-col justify-between border-[var(--paper)]/30 shadow-custom p-6 md:p-8 rounded backdrop-blur-sm"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -1094,9 +1114,9 @@
               </li> -->
             </ul>
             <a
-              href="https://system.taskreportingsystem.com/"
+              href="https://app.hustlein.net/"
               target="_blank"
-              class="rounded-full mt-4 p-3 md:p-4 text-center bg-[var(--paper)] block transition-colors duration-200"
+              class="rounded mt-4 p-3 md:p-4 text-center bg-[var(--paper)] block transition-colors duration-200"
             >
               Getting Started
             </a>
@@ -1119,13 +1139,13 @@
           <div class="flex-1 col-span-2 md:col-span-1">
             <!-- <img class="logo" src="./assets/icons/logo.svg" alt="" /> -->
             <img
-              class="logo"
+              class="logo pl-4 md:pl-0"
               src="https://res.cloudinary.com/dauv815j5/image/upload/v1772111855/Hustle_In_No_BG_White_mrnrrl.png"
               alt=""
             />
             <!-- <img
               src="./assets/icons/logo.svg"
-              class="mb-4 h-[60px] rounded-lg"
+              class="mb-4 h-[60px] rounded"
               alt=""
             /> -->
           </div>
